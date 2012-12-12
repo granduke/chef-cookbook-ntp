@@ -1,4 +1,12 @@
-chef-cookbook-ntp
-=================
+Description
+===========
 
-Chef cookbook that implements a NTP chef server or client.  NTP client is the default.
+Requirements
+============
+
+Attributes
+==========
+
+Usage
+=====
+
