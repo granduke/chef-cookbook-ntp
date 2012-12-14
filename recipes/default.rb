@@ -26,14 +26,6 @@ template "/etc/default/ntpdate" do
   notifies :restart, "service[ntp]"
 end
 
-template "/etc/ntp.conf" do
-  source "ntp.conf.erb"
-  owner "root"
-  group "root"
-  mode 0644
-  notifies :restart, "service[ntp]"
-end
-
 service "ntp" do
   service_name node[:ntp][:service]
   action [:enable, :start]
