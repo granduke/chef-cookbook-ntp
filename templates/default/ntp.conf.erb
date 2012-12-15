@@ -6,15 +6,15 @@ filegen peerstats file peerstats type day enable
 filegen clockstats file clockstats type day enable
 
 <% if node[:ntp][:is_server] -%>
-  server time.nist.gov iburst
-  server 0.ubuntu.pool.ntp.org
-  server 1.ubuntu.pool.ntp.org
-  server 2.ubuntu.pool.ntp.org
-  server 3.ubuntu.pool.ntp.org
+  server 0.north-america.pool.ntp.org 
+  server 1.north-america.pool.ntp.org
+  server 2.north-america.pool.ntp.org
+  server 3.north-america.pool.ntp.org
+  server 4.north-america.pool.ntp.org
 <% else -%>
-<% node[:ntp][:servers].each do |ntpserver| -%>
-  server <%= ntpserver %>
-<% end -%>
+  <% node[:ntp][:servers].each do |ntpserver| -%>
+    server <%= ntpserver %>
+  <% end -%>
 <% end -%>
 
 restrict -4 default kod notrap nomodify nopeer noquery
