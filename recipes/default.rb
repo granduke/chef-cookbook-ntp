@@ -30,13 +30,8 @@ package "ntp" do
   action [:install]
 end
 
-<<<<<<< HEAD
 template "/etc/ntp.conf" do
   source "ntp.conf.erb"
-=======
-template "/etc/default/ntpdate" do
-  source "ntpdate.default.erb"
->>>>>>> 0f8e48fa137849de5c7697d88c45619c23345572
   owner "root"
   group "root"
   mode 0644
