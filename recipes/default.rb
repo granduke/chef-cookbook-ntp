@@ -24,7 +24,7 @@ case node[:platform]
        )
     end
   end
-end
+
 
 package "ntp" do
   action [:install]
