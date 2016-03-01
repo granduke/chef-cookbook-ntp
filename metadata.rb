@@ -1,3 +1,4 @@
+name             "chef-ntp"
 maintainer       "The Hybrid Group"
 maintainer_email "jerry@hybridgroup.com"
 license          "All rights reserved"
